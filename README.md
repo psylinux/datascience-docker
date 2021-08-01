@@ -5,7 +5,7 @@ Docker Build for Data Science
 
 - Download and install Docker Desktop from [Official Website](https://www.docker.com/products/docker-desktop)
 
-- Download and install Visual Studio Code (VSCode) from (Official Website](https://code.visualstudio.com/download)
+- Download and install Visual Studio Code (VSCode) from [Official Website](https://code.visualstudio.com/download)
 
 ```bash
 git clone https://github.com/psylinux/datascience-docker.git
