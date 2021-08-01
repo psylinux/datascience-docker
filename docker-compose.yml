@@ -1,0 +1,38 @@
+version: "3.1"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes: 
+      - /Users/cowboy/Documents/postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+
+  adminer:
+    image: adminer
+    restart: always
+    depends_on: 
+      - postgres
+    ports:
+      - 8080:8080
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    depends_on: 
+      - postgres
+    ports:
+      - 8081:80
+    environment:
+      PGADMIN_DEFAULT_PASSWORD: "postgres"
+      PGADMIN_DEFAULT_EMAIL: "postgres@localhost.local"
+
+  datascience:
+    build: .
+    image: jupyter/datascience-notebook
+    restart: always
+    ports:
+      - 8888:8888
