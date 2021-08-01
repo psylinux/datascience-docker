@@ -1,2 +1,4 @@
-.devcontainer
-work/
+.DS_Store
+.devcontainer/
+working/*
+postgres-data/*

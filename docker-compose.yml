@@ -1,26 +1,18 @@
-version: "3.1"
+version: "3.9"
 
 services:
   postgres:
-    image: postgres
+    image: postgres:latest
     restart: always
     ports:
       - 5432:5432
     volumes: 
-      - /Users/cowboy/Dropbox/Marcos/Universidade/USP/PostgreSQL/postgres_data:/var/lib/postgresql/data
+      - ./postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: "postgres"
 
-  adminer:
-    image: adminer
-    restart: always
-    depends_on: 
-      - postgres
-    ports:
-      - 8080:8080
-
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:latest
     restart: always
     depends_on: 
       - postgres
@@ -32,7 +24,9 @@ services:
 
   datascience:
     build: .
-    image: jupyter/datascience-notebook
+    image: jupyter/datascience-notebook:latest
     restart: always
+    depends_on: 
+      - postgres
     ports:
       - 8888:8888
