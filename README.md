@@ -1,6 +1,14 @@
 # datascience-docker
 Docker Build for Data Science
 
+## All commands in sum
+```bash
+git clone https://github.com/psylinux/datascience-docker.git
+cd datascience-docker
+docker-compose -f docker-compose.yml up --build -d
+code .
+```
+
 ## How to use this
 
 - Clone this repo to your computer
@@ -14,4 +22,3 @@ git clone https://github.com/psylinux/datascience-docker.git
 ```bash
 docker-compose -f docker-compose.yml up --build
 ```
-
