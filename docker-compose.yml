@@ -7,7 +7,7 @@ services:
     ports:
       - 5432:5432
     volumes: 
-      - /Users/cowboy/Documents/postgres_data:/var/lib/postgresql/data
+      - /Users/cowboy/Dropbox/Marcos/Universidade/USP/PostgreSQL/postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: "postgres"
 
