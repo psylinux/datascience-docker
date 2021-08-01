@@ -1,3 +1,5 @@
+*.zip
+*.7zip
 .DS_Store
 working/*
 postgres-data/*
