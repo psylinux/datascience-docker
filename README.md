@@ -9,7 +9,7 @@ docker-compose -f docker-compose.yml up --build -d
 code .
 ```
 
-## How to use this
+## How to use this (step-by-step)
 
 - Clone this repo to your computer
 ```bash
